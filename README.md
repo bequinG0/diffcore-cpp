@@ -19,7 +19,7 @@
 
 ### Установка зависимостей
 
-'''bash
+```bash
 # Arch Linux
 sudo pacman -S eigen gnuplot
 
@@ -28,11 +28,11 @@ sudo apt install libeigen3-dev gnuplot
 
 # macOS
 brew install eigen gnuplot
-'''
+```
 
 ## Структура проекта и сборка
 
-'''
+```
 diffcore-cpp/
 ├── include/          # Заголовочные файлы
 │   ├── diff_scheme.h     # Задача Коши
@@ -53,22 +53,22 @@ diffcore-cpp/
 ├── Makefile
 ├── LICENSE
 └── README.md
-'''
+```
 
-'''bash
+```bash
 git clone https://github.com/bequ1n/diffcore-cpp.git
 cd diffcore-cpp
 mkdir -p build && cd build
 cmake ..
 make
 ./diffcore
-'''
+```
 
 ## Быстрый старт
 
 ### Задача Коши
 
-'''cpp
+```cpp
 #include "diff_scheme.h"
 
 auto rhs = [](double x, double y) { return y; };         // y' = y
@@ -79,11 +79,11 @@ auto euler = [](double x, double y, double h, auto f) {
 DiffScheme scheme(0.01, euler);
 auto result = scheme.execute(0.0, 1.0, 0.0, 1.0, rhs);
 // result — вектор пар {x_i, y_i}
-'''
+```
 
 ### Краевая задача
 
-'''cpp
+```cpp
 #include "bvp.h"
 #include "condition.h"
 
@@ -95,7 +95,7 @@ auto bc = std::make_unique<DirichletCondition>(0.0, 1.0);
 BVP problem(0.0, 1.0, 100, k, q, f, std::move(bc));
 auto [x, u] = problem.execute();
 // x — сетка, u — решение
-'''
+```
 
 ## Автор
 
