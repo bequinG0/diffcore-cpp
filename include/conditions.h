@@ -10,7 +10,11 @@
 #include <string>
 #include <algorithm>
 
+#include <Eigen/Sparse>
+#include <Eigen/Dense>
+
 using namespace std;
+using namespace Eigen;
 
 class BoundaryConditions
 {
@@ -18,17 +22,23 @@ class BoundaryConditions
         //virtual BoundaryConditions() = default;
         virtual ~BoundaryConditions() = default;
 
-        virtual void addEquation();
+        virtual int addEquation(double h,const function<double(double)> &k,
+        const function<double (double)> &q, const function <double (double)> &f,
+        SparseMatrix <double> A, VectorXd b);
 
     private:
 };
 
-class DirichletConditions : public BoundaryConditions
+class DirichletCondition : public BoundaryConditions
 {
     private:
         double x, value;
-    
     public:
+        DirichletCondition(double _x, double _value) : value(_value), x(_x) {}
+
+        int addEquation(double h,const function<double(double)> &k,
+        const function<double (double)> &q, const function <double (double)> &f,
+        SparseMatrix <double> A, VectorXd b);
 
 };
 
