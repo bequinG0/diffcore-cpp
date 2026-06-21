@@ -14,11 +14,11 @@ using namespace std;
 
 class Interpolator
 {
-    public:
+    private:
         vector <pair <double, double>> data;
 
         Interpolator(vector <pair <double, double>> a);
-    private:
+    public:
 
         double LagrangeInterpolate(double x);
         double NewtonInterpolate(double x);

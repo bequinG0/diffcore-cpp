@@ -12,13 +12,21 @@
 
 using namespace std;
 
+template <typename Function>
 class BVP
 {
-    public:
-        double left, right, h;
-        
     private:
+        double left, right, step;
+        Function k, q, rho;
+    public:
+        BVP(double l, double r, double h, Function _k, Function _q, Function _rho) : left(l), right(r), step(h), k(_k), q(_q), rho(_rho) {}
 
+        ~BVP();
+
+        vector <pair <double, double>> execute()
+        {
+            return vector <pair <double, double>> ();
+        }
 };
 
 #endif
