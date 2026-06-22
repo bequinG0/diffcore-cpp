@@ -22,9 +22,9 @@ class BoundaryConditions
         //virtual BoundaryConditions() = default;
         virtual ~BoundaryConditions() = default;
 
-        virtual int addEquation(double h,const function<double(double)> &k,
+        virtual void addEquation(double h,const function<double(double)> &k,
         const function<double (double)> &q, const function <double (double)> &f,
-        SparseMatrix <double> A, VectorXd b);
+        SparseMatrix <double> &A, VectorXd &b);
 
     private:
 };
@@ -32,29 +32,41 @@ class BoundaryConditions
 class DirichletCondition : public BoundaryConditions
 {
     private:
-        double x, value;
+        int num;
+        double value;
     public:
-        DirichletCondition(double _x, double _value) : value(_value), x(_x) {}
+        DirichletCondition(int _num, double _value) : value(_value), num(_num) {}
 
-        int addEquation(double h,const function<double(double)> &k,
+        void addEquation(double h,const function<double(double)> &k,
         const function<double (double)> &q, const function <double (double)> &f,
-        SparseMatrix <double> A, VectorXd b);
+        SparseMatrix <double> &A, VectorXd &b);
 
 };
 
 class NeumannCondition : public BoundaryConditions
 {
     private:
-        double x, value;
+        int num;
+        double value;
     public:
-        
+        NeumannCondition(int _num,  double _value) : value(_value), num(_num) {}
+
+        void addEquation(double h,const function<double(double)> &k,
+        const function<double (double)> &q, const function <double (double)> &f,
+        SparseMatrix <double> &A, VectorXd &b);
 };
 
 class RobinCondition : public BoundaryConditions
 {
     private:
-        double x, value, sigma;
+        int num;
+        double value, sigma;
     public:
+        RobinCondition(int _num, double _value, double _sigma) : value(_value), sigma(_sigma), num(_num) {}
+
+        void addEquation(double h,const function<double(double)> &k,
+            const function<double (double)> &q, const function <double (double)> &f,
+            SparseMatrix <double> &A, VectorXd &b);
 
 };
 

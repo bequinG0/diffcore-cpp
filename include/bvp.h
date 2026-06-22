@@ -24,25 +24,31 @@ class BVP
     private:
         double left, right, step;
         Function k, q, f;
-        BoundaryConditons conditons;
+        std::unique_ptr<BoundaryConditions> leftCond;
+        std::unique_ptr<BoundaryConditions> rightCond;
+        Eigen::SparseMatrix<double> A;
+        Eigen::VectorXd b;
 
-        SparseMatrix <double> A;
-        VectorXd b;
     public:
-        //BVP(double l, double r, double h, Function _k, Function _q, Function _rho, BoundaryConditions _cond) : left(l), right(r), step(h), k(_k), q(_q), rho(_rho), conditions(_cond) {}
-        BVP(double l, double r, double h, Function _k, Function _q, Function _f, BoundaryConditions _cond)
+        BVP(double l, double r, double h,
+            Function _k, Function _q, Function _f,
+            std::unique_ptr<BoundaryConditions> _leftCond,
+            std::unique_ptr<BoundaryConditions> _rightCond)
+            : left(l), right(r), step(h),
+            k(std::move(_k)), q(std::move(_q)), f(std::move(_f)),
+            leftCond(std::move(_leftCond)),
+            rightCond(std::move(_rightCond)),
+            A((int)((r - l) / h) + 1, (int)((r - l) / h) + 1),
+            b((int)((r - l) / h) + 1)
         {
-            left = l; right = r; step = h; k = _k; q = _q; f = _f; conditions = _cond;
-
             int N = (right - left) / step;
-            A.resize(N + 1, N + 1);
-            b.resize(N + 1);
-            double h2 = step * step;  // h^2
+            double h2 = step * step;
+
             for (int i = 1; i < N; ++i)
             {
                 double xi = left + i * step;
-                double k_m = k(xi - 0.5 * step);  // k_{i-1/2}
-                double k_p = k(xi + 0.5 * step);  // k_{i+1/2}
+                double k_m = k(xi - 0.5 * step);
+                double k_p = k(xi + 0.5 * step);
 
                 A.coeffRef(i, i-1) = -k_m / h2;
                 A.coeffRef(i, i)   = (k_m + k_p) / h2 - q(xi);
@@ -50,18 +56,25 @@ class BVP
                 b(i) = f(xi);
             }
 
-            A.coeffRef(0, 0) = 1.0;
-            b(0) = 0.0;  // заглушка
-
-            A.coeffRef(N, N) = 1.0;
-            b(N) = 0.0;  // заглушка
+            leftCond->addEquation(step, k, q, f, A, b);
+            rightCond->addEquation(step, k, q, f, A, b);
         }
 
         ~BVP();
 
-        vector <pair <double, double>> execute()
+        auto execute() -> std::pair<std::vector<double>, std::vector<double>>
         {
-            return vector <pair <double, double>> ();
+            Eigen::SimplicialLDLT<Eigen::SparseMatrix<double>> solver;
+            solver.compute(A);
+            Eigen::VectorXd u = solver.solve(b);
+
+            std::vector<double> x(A.rows()), y(A.rows());
+            for (int i = 0; i < A.rows(); ++i)
+            {
+                x[i] = left + i * step;
+                y[i] = u(i);
+            }
+            return {x, y};
         }
 };
 
