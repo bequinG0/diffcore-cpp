@@ -1,32 +1,21 @@
 #pragma once
-#ifndef CONDITIONS_H
-#define CONDITIONS_H
 
-#include <iostream>
-#include <cstdio>
-#include <cmath>
-#include <utility>
 #include <functional>
-#include <string>
-#include <algorithm>
 
 #include <Eigen/Sparse>
 #include <Eigen/Dense>
 
-using namespace std;
-using namespace Eigen;
-
 class BoundaryConditions
 {
     public:
-        //virtual BoundaryConditions() = default;
         virtual ~BoundaryConditions() = default;
 
-        virtual void addEquation(double h,const function<double(double)> &k,
-        const function<double (double)> &q, const function <double (double)> &f,
-        SparseMatrix <double> &A, VectorXd &b);
-
-    private:
+        virtual void addEquation(double h,
+                                const std::function<double(double)>& k,
+                                const std::function<double(double)>& q,
+                                const std::function<double(double)>& f,
+                                Eigen::SparseMatrix<double>& A,
+                                Eigen::VectorXd& b) = 0;
 };
 
 class DirichletCondition : public BoundaryConditions
@@ -35,12 +24,15 @@ class DirichletCondition : public BoundaryConditions
         int num;
         double value;
     public:
-        DirichletCondition(int _num, double _value) : value(_value), num(_num) {}
+        DirichletCondition(int _num, double _value)
+            : num(_num), value(_value) {}
 
-        void addEquation(double h,const function<double(double)> &k,
-        const function<double (double)> &q, const function <double (double)> &f,
-        SparseMatrix <double> &A, VectorXd &b);
-
+        void addEquation(double h,
+                        const std::function<double(double)>& k,
+                        const std::function<double(double)>& q,
+                        const std::function<double(double)>& f,
+                        Eigen::SparseMatrix<double>& A,
+                        Eigen::VectorXd& b) override;
 };
 
 class NeumannCondition : public BoundaryConditions
@@ -49,11 +41,15 @@ class NeumannCondition : public BoundaryConditions
         int num;
         double value;
     public:
-        NeumannCondition(int _num,  double _value) : value(_value), num(_num) {}
+        NeumannCondition(int _num, double _value)
+            : num(_num), value(_value) {}
 
-        void addEquation(double h,const function<double(double)> &k,
-        const function<double (double)> &q, const function <double (double)> &f,
-        SparseMatrix <double> &A, VectorXd &b);
+        void addEquation(double h,
+                        const std::function<double(double)>& k,
+                        const std::function<double(double)>& q,
+                        const std::function<double(double)>& f,
+                        Eigen::SparseMatrix<double>& A,
+                        Eigen::VectorXd& b) override;
 };
 
 class RobinCondition : public BoundaryConditions
@@ -62,12 +58,13 @@ class RobinCondition : public BoundaryConditions
         int num;
         double value, sigma;
     public:
-        RobinCondition(int _num, double _value, double _sigma) : value(_value), sigma(_sigma), num(_num) {}
+        RobinCondition(int _num, double _value, double _sigma)
+            : num(_num), value(_value), sigma(_sigma) {}
 
-        void addEquation(double h,const function<double(double)> &k,
-            const function<double (double)> &q, const function <double (double)> &f,
-            SparseMatrix <double> &A, VectorXd &b);
-
+        void addEquation(double h,
+                        const std::function<double(double)>& k,
+                        const std::function<double(double)>& q,
+                        const std::function<double(double)>& f,
+                        Eigen::SparseMatrix<double>& A,
+                        Eigen::VectorXd& b) override;
 };
-
-#endif
