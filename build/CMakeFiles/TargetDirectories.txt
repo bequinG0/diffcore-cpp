@@ -1,2 +1,2 @@
-/home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles/edit_cache.dir
-/home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles/rebuild_cache.dir
+/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles/edit_cache.dir
+/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles/rebuild_cache.dir

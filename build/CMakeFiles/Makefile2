@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp
+CMAKE_SOURCE_DIR = /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/build
+CMAKE_BINARY_DIR = /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build
 
 #=============================================================================
 # Directory level rules for the build root directory

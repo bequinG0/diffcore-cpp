@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/build/cmake_install.cmake"
+		"/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

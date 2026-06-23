@@ -1,8 +1,12 @@
 #include "../include/conditions.h"
 
-void DirichletCondition::addEquation(double h,const function<double(double)> &k,
-        const function<double (double)> &q, const function <double (double)> &f,
-        SparseMatrix <double> &A, VectorXd &b)
+void DirichletCondition::addEquation(
+    double h,
+    const std::function<double(double)>& k,
+    const std::function<double(double)>& q,
+    const std::function<double(double)>& f,
+    Eigen::SparseMatrix<double>& A,
+    Eigen::VectorXd& b)
 {
     A.coeffRef(num, num) = 1.0;
     b(num) = value;
@@ -10,18 +14,18 @@ void DirichletCondition::addEquation(double h,const function<double(double)> &k,
 
 void NeumannCondition::addEquation(
     double h,
-    const function<double(double)>& k,
-    const function<double(double)>& q,
-    const function<double(double)>& f,
-    SparseMatrix<double>& A,
-    VectorXd& b)
+    const std::function<double(double)>& k,
+    const std::function<double(double)>& q,
+    const std::function<double(double)>& f,
+    Eigen::SparseMatrix<double>& A,
+    Eigen::VectorXd& b)
 {
     double x_mid, k_mid;
     int neighbor;
 
     if (num == 0)  // левая граница
     {
-        x_mid = h / 2.0;           // точка между узлами 0 и 1
+        x_mid = h / 2.0;
         k_mid = k(x_mid);
         neighbor = 1;
 
@@ -31,7 +35,7 @@ void NeumannCondition::addEquation(
     }
     else  // правая граница
     {
-        x_mid = num * h - h / 2.0;  // точка между узлами N-1 и N
+        x_mid = num * h - h / 2.0;
         k_mid = k(x_mid);
         neighbor = num - 1;
 
@@ -43,11 +47,11 @@ void NeumannCondition::addEquation(
 
 void RobinCondition::addEquation(
     double h,
-    const function<double(double)>& k,
-    const function<double(double)>& q,
-    const function<double(double)>& f,
-    SparseMatrix<double>& A,
-    VectorXd& b)
+    const std::function<double(double)>& k,
+    const std::function<double(double)>& q,
+    const std::function<double(double)>& f,
+    Eigen::SparseMatrix<double>& A,
+    Eigen::VectorXd& b)
 {
     double x_mid, k_mid;
     int neighbor;

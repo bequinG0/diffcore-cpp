@@ -17,9 +17,10 @@ class Interpolator
     private:
         vector <pair <double, double>> data;
 
-        Interpolator(vector <pair <double, double>> a);
+        
     public:
-
+        
+        Interpolator(vector <pair <double, double>> a);
         double LagrangeInterpolate(double x);
         double NewtonInterpolate(double x);
         double BSplainInterpolate(double x);
