@@ -48,7 +48,13 @@ double Interpolator::NewtonInterpolate(double x)
     return N;
 }
 
-double Interpolator::BSplainInterpolate(double x)
+double Interpolator::BSplainInterpolate(double x, int i, int k)
 {
+    if(k == 1 && (data[i].first < x && x < data[i+1].first)) return 1;
+    else if(k == 1 && (x < data[i].first || x > data[i+1].first)) return 0;
+    else if(k >= 2 && data[i+k-1].first - data[i].first != 0 && data[i+k].first - data[i+1].first != 0)
+    {
+        return (x-data[i].first)/(data[i+k-1].first - data[i].first) * BSplainInterpolate(x, i, k-1) + (data[i+k].first - x)/(data[i+k].first - data[i+1].first) * BSplainInterpolate(x, i+1, k-1);
+    }
     return 0;
 }

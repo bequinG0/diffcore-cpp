@@ -23,7 +23,7 @@ class Interpolator
         Interpolator(vector <pair <double, double>> a);
         double LagrangeInterpolate(double x);
         double NewtonInterpolate(double x);
-        double BSplainInterpolate(double x);
+        double BSplainInterpolate(double x, int i, int k);
 };
 
 #endif

@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /home/bequ1n/sandbox/works-with-git/numerical_methods/course_
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/diffcore.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen:
+codegen: CMakeFiles/diffcore.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,8 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean:
+clean: CMakeFiles/diffcore.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/diffcore.dir
+
+# All Build rule for target.
+CMakeFiles/diffcore.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target diffcore"
+.PHONY : CMakeFiles/diffcore.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/diffcore.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/diffcore.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles 0
+.PHONY : CMakeFiles/diffcore.dir/rule
+
+# Convenience name for target.
+diffcore: CMakeFiles/diffcore.dir/rule
+.PHONY : diffcore
+
+# codegen rule for target.
+CMakeFiles/diffcore.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target diffcore"
+.PHONY : CMakeFiles/diffcore.dir/codegen
+
+# clean rule for target.
+CMakeFiles/diffcore.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/clean
+.PHONY : CMakeFiles/diffcore.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

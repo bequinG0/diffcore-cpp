@@ -116,6 +116,115 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named diffcore
+
+# Build rule for target.
+diffcore: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 diffcore
+.PHONY : diffcore
+
+# fast build rule for target.
+diffcore/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/build
+.PHONY : diffcore/fast
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+src/conditions.o: src/conditions.cpp.o
+.PHONY : src/conditions.o
+
+# target to build an object file
+src/conditions.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/src/conditions.cpp.o
+.PHONY : src/conditions.cpp.o
+
+src/conditions.i: src/conditions.cpp.i
+.PHONY : src/conditions.i
+
+# target to preprocess a source file
+src/conditions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/src/conditions.cpp.i
+.PHONY : src/conditions.cpp.i
+
+src/conditions.s: src/conditions.cpp.s
+.PHONY : src/conditions.s
+
+# target to generate assembly for a file
+src/conditions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/src/conditions.cpp.s
+.PHONY : src/conditions.cpp.s
+
+src/interpolate.o: src/interpolate.cpp.o
+.PHONY : src/interpolate.o
+
+# target to build an object file
+src/interpolate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/src/interpolate.cpp.o
+.PHONY : src/interpolate.cpp.o
+
+src/interpolate.i: src/interpolate.cpp.i
+.PHONY : src/interpolate.i
+
+# target to preprocess a source file
+src/interpolate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/src/interpolate.cpp.i
+.PHONY : src/interpolate.cpp.i
+
+src/interpolate.s: src/interpolate.cpp.s
+.PHONY : src/interpolate.s
+
+# target to generate assembly for a file
+src/interpolate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/src/interpolate.cpp.s
+.PHONY : src/interpolate.cpp.s
+
+src/utils.o: src/utils.cpp.o
+.PHONY : src/utils.o
+
+# target to build an object file
+src/utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/src/utils.cpp.o
+.PHONY : src/utils.cpp.o
+
+src/utils.i: src/utils.cpp.i
+.PHONY : src/utils.i
+
+# target to preprocess a source file
+src/utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/src/utils.cpp.i
+.PHONY : src/utils.cpp.i
+
+src/utils.s: src/utils.cpp.s
+.PHONY : src/utils.s
+
+# target to generate assembly for a file
+src/utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/src/utils.cpp.s
+.PHONY : src/utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +233,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... diffcore"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... src/conditions.o"
+	@echo "... src/conditions.i"
+	@echo "... src/conditions.s"
+	@echo "... src/interpolate.o"
+	@echo "... src/interpolate.i"
+	@echo "... src/interpolate.s"
+	@echo "... src/utils.o"
+	@echo "... src/utils.i"
+	@echo "... src/utils.s"
 .PHONY : help
 
 
