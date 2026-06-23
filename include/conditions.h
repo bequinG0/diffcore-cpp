@@ -1,4 +1,6 @@
 #pragma once
+#ifndef CONDITIONS_H
+#define CONDITIONS_H
 
 #include <functional>
 
@@ -68,3 +70,5 @@ class RobinCondition : public BoundaryConditions
                         Eigen::SparseMatrix<double>& A,
                         Eigen::VectorXd& b) override;
 };
+
+#endif

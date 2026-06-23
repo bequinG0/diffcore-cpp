@@ -1,4 +1,6 @@
 #pragma once
+#ifndef BVP_H
+#define BVP_H
 
 #include <functional>
 #include <memory>
@@ -71,3 +73,5 @@ public:
         return {x, y};
     }
 };
+
+#endif
