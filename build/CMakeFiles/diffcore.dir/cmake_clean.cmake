@@ -6,8 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/diffcore.dir/src/conditions.cpp.o.d"
   "CMakeFiles/diffcore.dir/src/interpolate.cpp.o"
   "CMakeFiles/diffcore.dir/src/interpolate.cpp.o.d"
-  "CMakeFiles/diffcore.dir/src/utils.cpp.o"
-  "CMakeFiles/diffcore.dir/src/utils.cpp.o.d"
   "diffcore"
   "diffcore.pdb"
 )

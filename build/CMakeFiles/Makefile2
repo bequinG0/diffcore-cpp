@@ -85,12 +85,12 @@ clean: CMakeFiles/diffcore.dir/clean
 CMakeFiles/diffcore.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target diffcore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles --progress-num=1,2,3,4 "Built target diffcore"
 .PHONY : CMakeFiles/diffcore.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/diffcore.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/diffcore.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles 0
 .PHONY : CMakeFiles/diffcore.dir/rule
@@ -102,7 +102,7 @@ diffcore: CMakeFiles/diffcore.dir/rule
 # codegen rule for target.
 CMakeFiles/diffcore.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target diffcore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target diffcore"
 .PHONY : CMakeFiles/diffcore.dir/codegen
 
 # clean rule for target.

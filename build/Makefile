@@ -201,30 +201,6 @@ src/interpolate.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/src/interpolate.cpp.s
 .PHONY : src/interpolate.cpp.s
 
-src/utils.o: src/utils.cpp.o
-.PHONY : src/utils.o
-
-# target to build an object file
-src/utils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/src/utils.cpp.o
-.PHONY : src/utils.cpp.o
-
-src/utils.i: src/utils.cpp.i
-.PHONY : src/utils.i
-
-# target to preprocess a source file
-src/utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/src/utils.cpp.i
-.PHONY : src/utils.cpp.i
-
-src/utils.s: src/utils.cpp.s
-.PHONY : src/utils.s
-
-# target to generate assembly for a file
-src/utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/diffcore.dir/build.make CMakeFiles/diffcore.dir/src/utils.cpp.s
-.PHONY : src/utils.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -243,9 +219,6 @@ help:
 	@echo "... src/interpolate.o"
 	@echo "... src/interpolate.i"
 	@echo "... src/interpolate.s"
-	@echo "... src/utils.o"
-	@echo "... src/utils.i"
-	@echo "... src/utils.s"
 .PHONY : help
 
 

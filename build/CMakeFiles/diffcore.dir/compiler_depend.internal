@@ -3,6 +3,9 @@
 
 CMakeFiles/diffcore.dir/main.cpp.o
  /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/main.cpp
+ /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/include/bvp.h
+ /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/include/conditions.h
+ /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/include/plot.h
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h
@@ -126,6 +129,7 @@ CMakeFiles/diffcore.dir/main.cpp.o
  /usr/include/c++/16.1.1/bits/hash_bytes.h
  /usr/include/c++/16.1.1/bits/hashtable.h
  /usr/include/c++/16.1.1/bits/hashtable_policy.h
+ /usr/include/c++/16.1.1/bits/intcmp.h
  /usr/include/c++/16.1.1/bits/invoke.h
  /usr/include/c++/16.1.1/bits/ios_base.h
  /usr/include/c++/16.1.1/bits/istream.tcc
@@ -186,6 +190,7 @@ CMakeFiles/diffcore.dir/main.cpp.o
  /usr/include/c++/16.1.1/bits/stl_numeric.h
  /usr/include/c++/16.1.1/bits/stl_pair.h
  /usr/include/c++/16.1.1/bits/stl_raw_storage_iter.h
+ /usr/include/c++/16.1.1/bits/stl_relops.h
  /usr/include/c++/16.1.1/bits/stl_tempbuf.h
  /usr/include/c++/16.1.1/bits/stl_tree.h
  /usr/include/c++/16.1.1/bits/stl_uninitialized.h
@@ -270,6 +275,7 @@ CMakeFiles/diffcore.dir/main.cpp.o
  /usr/include/c++/16.1.1/type_traits
  /usr/include/c++/16.1.1/typeinfo
  /usr/include/c++/16.1.1/unordered_map
+ /usr/include/c++/16.1.1/utility
  /usr/include/c++/16.1.1/vector
  /usr/include/c++/16.1.1/version
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/atomic_word.h
@@ -1472,10 +1478,6 @@ CMakeFiles/diffcore.dir/src/interpolate.cpp.o
  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/include/stdarg.h
  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/include/stddef.h
 
-CMakeFiles/diffcore.dir/src/utils.cpp.o
- /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/src/utils.cpp
- /usr/include/stdc-predef.h
-
 diffcore
  /usr/lib/Scrt1.o
  /usr/lib/crti.o
@@ -1498,5 +1500,4 @@ diffcore
  /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles/diffcore.dir/main.cpp.o
  /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles/diffcore.dir/src/conditions.cpp.o
  /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles/diffcore.dir/src/interpolate.cpp.o
- /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles/diffcore.dir/src/utils.cpp.o
 

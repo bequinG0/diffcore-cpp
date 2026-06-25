@@ -41,14 +41,11 @@ public:
 
         for (int i = 1; i < N; ++i)
         {
-            double xi = left + i * step;
-            double k_m = k(xi - 0.5 * step);
-            double k_p = k(xi + 0.5 * step);
-
-            A.coeffRef(i, i-1) = -k_m / h2;
-            A.coeffRef(i, i)   = (k_m + k_p) / h2 - q(xi);
-            A.coeffRef(i, i+1) = -k_p / h2;
-            b(i) = f(xi);
+            // Явно подставляем k в полуцелых точках
+            A.coeffRef(i, i-1) = -k(left + i*step - 0.5*step) / h2;
+            A.coeffRef(i, i)   = (k(left + i*step - 0.5*step) + k(left + i*step + 0.5*step)) / h2 - q(left + i*step);
+            A.coeffRef(i, i+1) = -k(left + i*step + 0.5*step) / h2;
+            b(i) = f(left + i*step);
         }
 
         leftCond->addEquation(step, k, q, f, A, b);
@@ -57,9 +54,9 @@ public:
 
     ~BVP() = default;
 
-    auto execute() -> std::pair<std::vector<double>, std::vector<double>>
+    auto solve() -> std::pair<std::vector<double>, std::vector<double>>
     {
-        Eigen::SimplicialLDLT<Eigen::SparseMatrix<double>> solver;
+        Eigen::SparseLU<Eigen::SparseMatrix<double>> solver;
         solver.compute(A);
         Eigen::VectorXd u = solver.solve(b);
 
