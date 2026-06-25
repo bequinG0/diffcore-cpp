@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp
+CMAKE_SOURCE_DIR = /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build
+CMAKE_BINARY_DIR = /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/diffcore.dir/depend.make
@@ -73,46 +73,46 @@ CMakeFiles/diffcore.dir/codegen:
 .PHONY : CMakeFiles/diffcore.dir/codegen
 
 CMakeFiles/diffcore.dir/main.cpp.o: CMakeFiles/diffcore.dir/flags.make
-CMakeFiles/diffcore.dir/main.cpp.o: /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/main.cpp
+CMakeFiles/diffcore.dir/main.cpp.o: /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/main.cpp
 CMakeFiles/diffcore.dir/main.cpp.o: CMakeFiles/diffcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/diffcore.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/diffcore.dir/main.cpp.o -MF CMakeFiles/diffcore.dir/main.cpp.o.d -o CMakeFiles/diffcore.dir/main.cpp.o -c /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/diffcore.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/diffcore.dir/main.cpp.o -MF CMakeFiles/diffcore.dir/main.cpp.o.d -o CMakeFiles/diffcore.dir/main.cpp.o -c /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/main.cpp
 
 CMakeFiles/diffcore.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/diffcore.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/main.cpp > CMakeFiles/diffcore.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/main.cpp > CMakeFiles/diffcore.dir/main.cpp.i
 
 CMakeFiles/diffcore.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/diffcore.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/main.cpp -o CMakeFiles/diffcore.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/main.cpp -o CMakeFiles/diffcore.dir/main.cpp.s
 
 CMakeFiles/diffcore.dir/src/conditions.cpp.o: CMakeFiles/diffcore.dir/flags.make
-CMakeFiles/diffcore.dir/src/conditions.cpp.o: /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/src/conditions.cpp
+CMakeFiles/diffcore.dir/src/conditions.cpp.o: /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/src/conditions.cpp
 CMakeFiles/diffcore.dir/src/conditions.cpp.o: CMakeFiles/diffcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/diffcore.dir/src/conditions.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/diffcore.dir/src/conditions.cpp.o -MF CMakeFiles/diffcore.dir/src/conditions.cpp.o.d -o CMakeFiles/diffcore.dir/src/conditions.cpp.o -c /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/src/conditions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/diffcore.dir/src/conditions.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/diffcore.dir/src/conditions.cpp.o -MF CMakeFiles/diffcore.dir/src/conditions.cpp.o.d -o CMakeFiles/diffcore.dir/src/conditions.cpp.o -c /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/src/conditions.cpp
 
 CMakeFiles/diffcore.dir/src/conditions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/diffcore.dir/src/conditions.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/src/conditions.cpp > CMakeFiles/diffcore.dir/src/conditions.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/src/conditions.cpp > CMakeFiles/diffcore.dir/src/conditions.cpp.i
 
 CMakeFiles/diffcore.dir/src/conditions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/diffcore.dir/src/conditions.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/src/conditions.cpp -o CMakeFiles/diffcore.dir/src/conditions.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/src/conditions.cpp -o CMakeFiles/diffcore.dir/src/conditions.cpp.s
 
 CMakeFiles/diffcore.dir/src/interpolate.cpp.o: CMakeFiles/diffcore.dir/flags.make
-CMakeFiles/diffcore.dir/src/interpolate.cpp.o: /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/src/interpolate.cpp
+CMakeFiles/diffcore.dir/src/interpolate.cpp.o: /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/src/interpolate.cpp
 CMakeFiles/diffcore.dir/src/interpolate.cpp.o: CMakeFiles/diffcore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/diffcore.dir/src/interpolate.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/diffcore.dir/src/interpolate.cpp.o -MF CMakeFiles/diffcore.dir/src/interpolate.cpp.o.d -o CMakeFiles/diffcore.dir/src/interpolate.cpp.o -c /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/src/interpolate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/diffcore.dir/src/interpolate.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/diffcore.dir/src/interpolate.cpp.o -MF CMakeFiles/diffcore.dir/src/interpolate.cpp.o.d -o CMakeFiles/diffcore.dir/src/interpolate.cpp.o -c /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/src/interpolate.cpp
 
 CMakeFiles/diffcore.dir/src/interpolate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/diffcore.dir/src/interpolate.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/src/interpolate.cpp > CMakeFiles/diffcore.dir/src/interpolate.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/src/interpolate.cpp > CMakeFiles/diffcore.dir/src/interpolate.cpp.i
 
 CMakeFiles/diffcore.dir/src/interpolate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/diffcore.dir/src/interpolate.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/src/interpolate.cpp -o CMakeFiles/diffcore.dir/src/interpolate.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/src/interpolate.cpp -o CMakeFiles/diffcore.dir/src/interpolate.cpp.s
 
 # Object files for target diffcore
 diffcore_OBJECTS = \
@@ -129,7 +129,7 @@ diffcore: CMakeFiles/diffcore.dir/src/interpolate.cpp.o
 diffcore: CMakeFiles/diffcore.dir/build.make
 diffcore: CMakeFiles/diffcore.dir/compiler_depend.ts
 diffcore: CMakeFiles/diffcore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable diffcore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable diffcore"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/diffcore.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -141,6 +141,6 @@ CMakeFiles/diffcore.dir/clean:
 .PHONY : CMakeFiles/diffcore.dir/clean
 
 CMakeFiles/diffcore.dir/depend:
-	cd /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles/diffcore.dir/DependInfo.cmake "--color=$(COLOR)" diffcore
+	cd /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/build /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/build /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/build/CMakeFiles/diffcore.dir/DependInfo.cmake "--color=$(COLOR)" diffcore
 .PHONY : CMakeFiles/diffcore.dir/depend
 

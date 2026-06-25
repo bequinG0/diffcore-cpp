@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/CMakeLists.txt"
+  "/home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/CMakeLists.txt"
   "CMakeFiles/4.3.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.3.3/CMakeSystem.cmake"
   "/usr/local/share/eigen3/cmake/Eigen3Config.cmake"

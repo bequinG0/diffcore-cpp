@@ -1,7 +1,7 @@
 CMakeFiles/diffcore.dir/src/interpolate.cpp.o: \
- /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/src/interpolate.cpp \
+ /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/src/interpolate.cpp \
  /usr/include/stdc-predef.h \
- /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/src/../include/interpolate.h \
+ /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/src/../include/interpolate.h \
  /usr/include/c++/16.1.1/iostream \
  /usr/include/c++/16.1.1/bits/requires_hosted.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \

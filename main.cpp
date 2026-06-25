@@ -13,7 +13,7 @@ using namespace Eigen;
 int main()
 {
     double a = 0, b = 2;
-    double h = 1e-5;
+    double h = 1e-4;
     int N = (b - a) / h;
 
     auto k = [](double x) -> double { return 4 - x; };
@@ -26,7 +26,7 @@ int main()
     BVP<std::function<double(double)>> task(a, b, h, k, q, f,
         std::move(left), std::move(right));
 
-    auto ans = task.execute();
+    auto ans = task.solve();
 
     /*for (size_t i = 0; i < ans.first.size(); ++i)
         std::cout << ans.first[i] << "\t" << ans.second[i] << "\n"; */

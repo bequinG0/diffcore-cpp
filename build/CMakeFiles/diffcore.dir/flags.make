@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/include -isystem /usr/local/include/eigen3
+CXX_INCLUDES = -I/home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/include -isystem /usr/local/include/eigen3
 
 CXX_FLAGS = -std=gnu++20
 

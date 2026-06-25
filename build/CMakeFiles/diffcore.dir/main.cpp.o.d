@@ -1,5 +1,5 @@
 CMakeFiles/diffcore.dir/main.cpp.o: \
- /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/main.cpp \
+ /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/16.1.1/iostream \
  /usr/include/c++/16.1.1/bits/requires_hosted.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -209,7 +209,7 @@ CMakeFiles/diffcore.dir/main.cpp.o: \
  /usr/include/c++/16.1.1/bits/stl_bvector.h \
  /usr/include/c++/16.1.1/bits/vector.tcc /usr/include/c++/16.1.1/array \
  /usr/include/c++/16.1.1/bits/binders.h \
- /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/include/conditions.h \
+ /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/include/conditions.h \
  /usr/local/include/eigen3/Eigen/Sparse \
  /usr/local/include/eigen3/Eigen/SparseCore \
  /usr/local/include/eigen3/Eigen/Core \
@@ -538,8 +538,8 @@ CMakeFiles/diffcore.dir/main.cpp.o: \
  /usr/local/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/local/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
  /usr/local/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/include/bvp.h \
+ /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/include/bvp.h \
  /usr/include/c++/16.1.1/utility \
  /usr/include/c++/16.1.1/bits/stl_relops.h \
  /usr/include/c++/16.1.1/bits/intcmp.h \
- /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/include/plot.h
+ /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/include/plot.h

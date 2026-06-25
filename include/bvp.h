@@ -11,8 +11,9 @@
 #include <Eigen/Dense>
 
 #include "conditions.h"
+#include "diffscheme.h"
 
-template <typename Function>
+template <typename Function, typename RowFormula>
 class BVP
 {
 private:
@@ -22,6 +23,7 @@ private:
     std::unique_ptr<BoundaryConditions> rightCond;
     Eigen::SparseMatrix<double> A;
     Eigen::VectorXd b;
+    DiffScheme<Function, RowFormula> scheme;
 
 public:
     BVP(double l, double r, double h,
@@ -39,14 +41,7 @@ public:
         int N = static_cast<int>((right - left) / step);
         double h2 = step * step;
 
-        for (int i = 1; i < N; ++i)
-        {
-            // Явно подставляем k в полуцелых точках
-            A.coeffRef(i, i-1) = -k(left + i*step - 0.5*step) / h2;
-            A.coeffRef(i, i)   = (k(left + i*step - 0.5*step) + k(left + i*step + 0.5*step)) / h2 - q(left + i*step);
-            A.coeffRef(i, i+1) = -k(left + i*step + 0.5*step) / h2;
-            b(i) = f(left + i*step);
-        }
+        for (int i = 1; i < N; ++i) scheme.fillMatrix(A, b, N);
 
         leftCond->addEquation(step, k, q, f, A, b);
         rightCond->addEquation(step, k, q, f, A, b);
@@ -68,6 +63,19 @@ public:
             y[static_cast<size_t>(i)] = u(i);
         }
         return {x, y};
+    }
+
+    std::vector <double> eigenvalues()
+    {
+        Eigen::MatrixXd A_dense(A);
+        Eigen::SelfAdjointEigenSolver<Eigen::MatrixXd> eigensolver(A_dense);
+
+        if (eigensolver.info() != Eigen::Success) throw std::runtime_error("EigenSolver failed");
+
+        std::vector<double> ev(eigensolver.eigenvalues().size());
+        for (int i = 0; i < eigensolver.eigenvalues().size(); ++i) ev[i] = eigensolver.eigenvalues()(i);
+
+        return ev;
     }
 };
 

@@ -1,7 +1,7 @@
 CMakeFiles/diffcore.dir/src/conditions.cpp.o: \
- /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/src/conditions.cpp \
+ /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/src/conditions.cpp \
  /usr/include/stdc-predef.h \
- /home/bequ1n/sandbox/works-with-git/numerical_methods/course_work/diffcore-cpp/src/../include/conditions.h \
+ /home/bequ1n/Documents/physics/numerical_methods/course_work/diffcore-cpp/src/../include/conditions.h \
  /usr/include/c++/16.1.1/functional \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
