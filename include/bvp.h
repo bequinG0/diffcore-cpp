@@ -29,11 +29,13 @@ public:
     BVP(double l, double r, double h,
         Function _k, Function _q, Function _f,
         std::unique_ptr<BoundaryConditions> _leftCond,
-        std::unique_ptr<BoundaryConditions> _rightCond)
+        std::unique_ptr<BoundaryConditions> _rightCond,
+        DiffScheme<Function, RowFormula> _scheme)
         : left(l), right(r), step(h),
           k(std::move(_k)), q(std::move(_q)), f(std::move(_f)),
           leftCond(std::move(_leftCond)),
           rightCond(std::move(_rightCond)),
+          scheme(std::move(_scheme)),
           A(static_cast<int>((r - l) / h) + 1,
             static_cast<int>((r - l) / h) + 1),
           b(static_cast<int>((r - l) / h) + 1)
@@ -41,7 +43,7 @@ public:
         int N = static_cast<int>((right - left) / step);
         double h2 = step * step;
 
-        for (int i = 1; i < N; ++i) scheme.fillMatrix(A, b, N);
+        for (int i = 1; i < N; ++i) scheme.fillMatrix(A, b, N, left);
 
         leftCond->addEquation(step, k, q, f, A, b);
         rightCond->addEquation(step, k, q, f, A, b);
