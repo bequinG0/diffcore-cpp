@@ -13,7 +13,7 @@
 #include "conditions.h"
 #include "diffscheme.h"
 
-template <typename Function, typename RowFormula>
+template <typename Function, typename Formula, typename RowFormula>
 class BVP
 {
 private:
@@ -23,14 +23,14 @@ private:
     std::unique_ptr<BoundaryConditions> rightCond;
     Eigen::SparseMatrix<double> A;
     Eigen::VectorXd b;
-    DiffScheme<Function, RowFormula> scheme;
+    DiffScheme<Formula, RowFormula> scheme;
 
 public:
     BVP(double l, double r, double h,
         Function _k, Function _q, Function _f,
         std::unique_ptr<BoundaryConditions> _leftCond,
         std::unique_ptr<BoundaryConditions> _rightCond,
-        DiffScheme<Function, RowFormula> _scheme)
+        DiffScheme<Formula, RowFormula> _scheme)
         : left(l), right(r), step(h),
           k(std::move(_k)), q(std::move(_q)), f(std::move(_f)),
           leftCond(std::move(_leftCond)),
