@@ -67,17 +67,26 @@ public:
         return {x, y};
     }
 
-    std::vector <double> eigenvalues()
+    auto eigenSolve() -> std::pair<std::pair<double, double>, std::pair<std::vector<double>, std::vector<double>>>
     {
-        Eigen::MatrixXd A_dense(A);
-        Eigen::SelfAdjointEigenSolver<Eigen::MatrixXd> eigensolver(A_dense);
+        int N = A.rows() - 1;
+        Eigen::SparseMatrix<double> A_inner = A.block(1, 1, N-1, N-1);
+        Eigen::MatrixXd A_dense(A_inner);
+        
+        Eigen::SelfAdjointEigenSolver<Eigen::MatrixXd> solver(A_dense);
+        if (solver.info() != Eigen::Success)
+            throw std::runtime_error("EigenSolver failed");
 
-        if (eigensolver.info() != Eigen::Success) throw std::runtime_error("EigenSolver failed");
+        double lambda1 = solver.eigenvalues()(0);
+        double lambda2 = solver.eigenvalues()(1);
 
-        std::vector<double> ev(eigensolver.eigenvalues().size());
-        for (int i = 0; i < eigensolver.eigenvalues().size(); ++i) ev[i] = eigensolver.eigenvalues()(i);
+        std::vector<double> u1(A.rows(), 0.0), u2(A.rows(), 0.0);
+        for (int i = 0; i < N-1; ++i) {
+            u1[i+1] = solver.eigenvectors()(i, 0);
+            u2[i+1] = solver.eigenvectors()(i, 1);
+        }
 
-        return ev;
+        return {{lambda1, lambda2}, {u1, u2}};
     }
 };
 
