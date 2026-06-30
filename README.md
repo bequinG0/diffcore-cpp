@@ -107,12 +107,15 @@ Plot::draw(x, {u}, "D1 solution", {"u(x)"});
 ```cpp 
 auto [lambdas, vectors] = task.eigenSolve();
 auto [lam1, lam2] = lambdas;
-auto [u1, u2] = vectors;```
+auto [u1, u2] = vectors;
+```
 
 ### Интерполяция:
 
-```Interpolator interp({{0,2}, {1,3}, {2,6}});
-double y = interp.lagrange(1.5);```
+```cpp
+Interpolator interp({{0,2}, {1,3}, {2,6}});
+double y = interp.lagrange(1.5);
+```
 
 ## Автор
 
