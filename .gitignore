@@ -8,6 +8,7 @@ build/
 # CMake
 CMakeCache.txt
 CMakeFiles/
+Makefile
 
 # IDE
 .vscode/
