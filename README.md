@@ -86,16 +86,33 @@ auto result = scheme.execute(0.0, 1.0, 0.0, 1.0, rhs);
 ```cpp
 #include "bvp.h"
 #include "condition.h"
+#include "plot.h"
 
-auto k = [](double x) { return 1.0; };
-auto q = [](double x) { return 0.0; };
-auto f = [](double x) { return -2.0; };
+auto k = [](double x) { return 4.0 - x; };
+auto q = [](double x) { return 2.0; };
+auto f = [](double x) { return (10.0*(x*x - 5.0*x + 9.0))/exp(x); };
 
-auto bc = std::make_unique<DirichletCondition>(0.0, 1.0);
-BVP problem(0.0, 1.0, 100, k, q, f, std::move(bc));
-auto [x, u] = problem.execute();
-// x — сетка, u — решение
+auto left  = std::make_unique<DirichletCondition>(0, 2.0);
+auto right = std::make_unique<DirichletCondition>(N, 20.0*exp(-2.0));
+
+DiffScheme scheme(h, euler, DSK2);
+BVP task(a, b, h, k, q, f, std::move(left), std::move(right), std::move(scheme));
+auto [x, u] = task.solve();
+
+Plot::draw(x, {u}, "D1 solution", {"u(x)"});
 ```
+
+### Собственные значения:
+
+```cpp 
+auto [lambdas, vectors] = task.eigenSolve();
+auto [lam1, lam2] = lambdas;
+auto [u1, u2] = vectors;```
+
+### Интерполяция:
+
+```Interpolator interp({{0,2}, {1,3}, {2,6}});
+double y = interp.lagrange(1.5);```
 
 ## Автор
 
